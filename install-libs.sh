@@ -6,6 +6,7 @@ NODEJS=node-v0.4.10
 MONGODB=mongodb-src-r1.8.2
 
 # Change the below lines to change the install paths
+mkdir ~/local
 NODE_INSTALL_PATH=$HOME/local/node
 echo 'export NODE_INSTALL_PATH=$HOME/local/node' >> ~/.paths
 MONGO_INSTALL_PATH=$HOME/local/mongo
@@ -31,13 +32,15 @@ cd ~/Downloads
 wget http://nodejs.org/dist/$NODEJS.tar.gz
 tar -xzvf $NODEJS.tar.gz
 cd $NODEJS
-mkdir $NODE_INSTALL_PATH
 ./configure --prefix=$NODE_INSTALL_PATH
 make
 make install
 echo 'export PATH=$NODE_INSTALL_PATH/bin:$PATH' >> ~/.paths
 echo 'export NODE_PATH=$NODE_INSTALL_PATH:$NODE_INSTALL_PATH/lib/node_modules' >> ~/.paths
 source ~/.bashrc
+
+# npm
+curl http://npmjs.org/install.sh | sh
 
 # mongodb
 cd ~/Downloads
