@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sudo apt-get install git-core
-sudo apt-get install vim
-sudo apt-get install exuberant-ctags
+yes | sudo apt-get install git-core
+yes | sudo apt-get install vim
+yes | sudo apt-get install exuberant-ctags
 
 if [ ! -d $HOME/.ssh ]; then
   ssh-keygen -t rsa -C "madhums8@gmail.com"
@@ -38,7 +38,9 @@ if [ ! -e ~/Downloads/google-chrome-stable_current_amd64.deb ]; then
   sudo dpkg -i google-chrome-stable_current_amd64.deb
 fi
 
-sudo apt-get install compizconfig-settings-manager
-sudo apt-get install gimp
-sudo apt-get install virtualbox-ose
-sudo apt-get install vlc
+yes | sudo apt-get install compizconfig-settings-manager
+yes | sudo apt-get install gimp
+yes | sudo apt-get install virtualbox-ose
+yes | sudo apt-get install vlc
+
+./install-libs.sh
