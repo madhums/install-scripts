@@ -52,10 +52,10 @@
 # Check the paths and data dir with additional options at startup...
 DESC="Mongodb Service"
 NAME=mongod
-MONGOPATH=$MONGO_INSTALL_PATH
+MONGOPATH=/home/madhu/local/mongo
 DAEMON=$MONGOPATH/bin/$NAME
 #Please do not forget to give correct path
-DBPATH=$MONGO_DB_PATH
+DBPATH=/data/db
 #If security matters, please change arg to --auth
 DAEMON_ARGS="--dbpath $DBPATH --noauth"
 PIDFILE=/var/run/$NAME.pid
