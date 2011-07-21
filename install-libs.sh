@@ -5,4 +5,4 @@
 ./install-ror.sh
 
 # mysql
-yes | sudo apt-get install mysql-server
+yes | echo "madhu" | sudo -S apt-get install mysql-server

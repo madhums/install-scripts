@@ -12,7 +12,7 @@ export NODE_INSTALL_PATH
 
 
 # prerequisites
-yes | sudo apt-get install libssl-dev
+yes | echo "madhu" | sudo -S apt-get install libssl-dev
 
 # nodejs
 cd ~/Downloads
@@ -32,7 +32,7 @@ export NODE_PATH
 
 # npm
 # prerequisites
-yes | sudo apt-get install curl
+yes | echo "madhu" | sudo -S apt-get install curl
 curl http://npmjs.org/install.sh | clean=yes sh
 
 source ~/.bashrc

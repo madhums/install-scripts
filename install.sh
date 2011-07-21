@@ -1,11 +1,17 @@
 #!/bin/bash
 
-yes | sudo apt-get install git-core
-yes | sudo apt-get install vim
-yes | sudo apt-get install exuberant-ctags
+yes | echo "madhu" | sudo -S apt-get install git-core
+yes | echo "madhu" | sudo -S apt-get install vim
+yes | echo "madhu" | sudo -S apt-get install exuberant-ctags
 
 if [ ! -d $HOME/.ssh ]; then
   ssh-keygen -t rsa -C "madhums8@gmail.com"
+fi
+
+if [ ! -d $HOME/.fonts ]; then
+  mkdir ~/.fonts
+  cp DroidSansMono.ttf ~/.fonts
+  echo "madhu" | sudo -S fc-cache -fv
 fi
 
 cd ~
@@ -35,12 +41,14 @@ fi
 cd ~/Downloads
 if [ ! -e ~/Downloads/google-chrome-stable_current_amd64.deb ]; then
   wget https://dl-ssl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  sudo dpkg -i google-chrome-stable_current_amd64.deb
+  echo "madhu" | sudo -S dpkg -i google-chrome-stable_current_amd64.deb
 fi
 
-yes | sudo apt-get install compizconfig-settings-manager
-yes | sudo apt-get install gimp
-yes | sudo apt-get install virtualbox-ose
-yes | sudo apt-get install vlc
+yes | echo "madhu" | sudo -S apt-get install compizconfig-settings-manager
+yes | echo "madhu" | sudo -S apt-get install gimp
+yes | echo "madhu" | sudo -S apt-get install virtualbox-ose
+yes | echo "madhu" | sudo -S apt-get install vlc
+yes | echo "madhu" | sudo -S apt-get install flashplugin-installer
+yes | echo "madhu" | sudo -S apt-get install skype
 
 ./install-libs.sh
