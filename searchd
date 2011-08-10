@@ -1,0 +1,27 @@
+#!/bin/bash
+
+SPHINX_PATH=$HOME/local/sphinx
+
+case "${1:-''}" in
+  'start')
+        # put the command to start sphinx
+        # i.e., /usr/bin/searchd start or /usr/bin/searchd --daemon or whatever the command is
+        $SPHINX_PATH/bin/searchd
+        ;;
+  'stop')
+        # stop command here
+        $SPHINX_PATH/bin/searchd --stop
+        ;;
+  'status')
+        # status command here
+        $SPHINX_PATH/bin/searchd --status
+        ;;
+  '--config')
+        # status command here
+        $SPHINX_PATH/bin/searchd --config $2
+        ;;      
+  *)
+        echo "Usage: $SELF start | stop | status | --config /config/file/path"
+        exit 1
+        ;;
+esac
