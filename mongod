@@ -57,7 +57,7 @@ DAEMON=$MONGOPATH/bin/$NAME
 #Please do not forget to give correct path
 DBPATH=/data/db
 #If security matters, please change arg to --auth
-DAEMON_ARGS="--dbpath $DBPATH --noauth"
+DAEMON_ARGS="--dbpath $DBPATH --noauth --rest"
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
 
