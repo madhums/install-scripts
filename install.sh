@@ -50,5 +50,10 @@ yes | echo "madhu" | sudo -S apt-get install virtualbox-ose
 yes | echo "madhu" | sudo -S apt-get install vlc
 yes | echo "madhu" | sudo -S apt-get install flashplugin-installer
 yes | echo "madhu" | sudo -S apt-get install skype
+yes | echo "madhu" | sudo -S apt-get install shutter
+
+wget http://dl.google.com/linux/direct/google-talkplugin_current_amd64.deb
+echo "madhu" | sudo -S dpkg -i google-talkplugin_current_amd64.deb
+
 
 ./install-libs.sh
