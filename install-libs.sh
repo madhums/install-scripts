@@ -14,6 +14,9 @@ yes | echo "madhu" | sudo -S apt-get install apache2-utils
 # others
 yes | echo "madhu" | sudo -S apt-get install libxslt-dev libxml2-dev
 
+# apache2
+# install jpeg lib
+# install imagemagick
 # install nautilus-elementary theme
 # globus preview
 # remove libreoffice
