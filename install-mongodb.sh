@@ -1,11 +1,10 @@
 #!/bin/bash
 
 # Versions of softwares to be installed and paths
-MONGODB=mongodb-src-r1.8.2
+MONGODB=mongodb-src-r2.0.1
 mkdir ~/local
 MONGO_INSTALL_PATH=$HOME/local/mongo
 echo 'export MONGO_INSTALL_PATH=$HOME/local/mongo' >> ~/.paths
-MONGO_INSTALL_PATH=$HOME/local/mongo
 export MONGO_INSTALL_PATH
 MONGO_DB_PATH=/data/db
 echo 'export MONGO_DB_PATH=/data/db' >> ~/.paths
