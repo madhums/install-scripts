@@ -52,7 +52,7 @@
 # Check the paths and data dir with additional options at startup...
 DESC="Mongodb Service"
 NAME=mongod
-MONGOPATH=/home/madhu/local/mongo
+MONGOPATH=$HOME/local/mongo
 DAEMON=$MONGOPATH/bin/$NAME
 #Please do not forget to give correct path
 DBPATH=/data/db
@@ -77,7 +77,7 @@ SCRIPTNAME=/etc/init.d/$NAME
 do_start()
 {
 	echo -e "Starting $DESC \n"
-        start-stop-daemon -Sbm -p $PIDFILE --exec $DAEMON -- $DAEMON_ARGS 
+        start-stop-daemon -Sbm -p $PIDFILE --exec $DAEMON -- $DAEMON_ARGS
 	echo -e "\n started"
 
 }
