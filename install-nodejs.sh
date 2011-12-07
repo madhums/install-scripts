@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Versions of softwares to be installed and paths
-NODEJS=node-v0.4.10
+NODEJS=node-v0.6.2
 
 # Change the below lines to change the install paths
 mkdir ~/local
@@ -16,9 +16,10 @@ yes | echo "madhu" | sudo -S apt-get install libssl-dev
 
 # nodejs
 cd ~/Downloads
-wget http://nodejs.org/dist/$NODEJS.tar.gz
+wget http://nodejs.org/dist/v0.6.2/$NODEJS.tar.gz
 tar -xzvf $NODEJS.tar.gz
 cd $NODEJS
+make clean
 ./configure --prefix=$NODE_INSTALL_PATH
 make
 make install
